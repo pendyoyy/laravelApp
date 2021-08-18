@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,3 +22,6 @@ Route::post('login', 'Api\UserController@login');
 Route::post('register', 'Api\UserController@register');
 Route::get('jadwal', 'Api\JadwalController@index');
 Route::get('jadwalujian', 'Api\JadwalUjianController@index');
+
+Route::resource('mapel', 'Api\MapelController');
+Route::resource('nilai/tugas', 'Api\NilaiTugasController');
